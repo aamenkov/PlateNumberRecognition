@@ -6,6 +6,7 @@ from PIL import Image
 
 from characterExtractor import CharacterExtractor
 from plateDetector import PlateDetector
+from config import DETECTOR_MODEL_PATH
 
 
 if __name__ == '__main__':
@@ -20,7 +21,7 @@ if __name__ == '__main__':
     output_image_path = args.output_image_path
 
     # Load the plate detector
-    plate_detector = PlateDetector('keremberke/yolov5m-license-plate')
+    plate_detector = PlateDetector(DETECTOR_MODEL_PATH)
 
     # Load the character extractor
     character_extractor = CharacterExtractor()
